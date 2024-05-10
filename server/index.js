@@ -15,6 +15,14 @@ io.on('connection', socket =>{
             from: socket.id.slice(6)       
         });
     })
+
+    socket.on('writing', ()=>{
+        console.log("escribiendo...")
+        socket.broadcast.emit('writing');
+    })
+    socket.on('writing-stop', ()=>{
+        socket.broadcast.emit('writing-stop');
+    })
 })
 
 
