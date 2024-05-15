@@ -12,8 +12,8 @@ const App: React.FC = ()=> {
     const [messages, setMessages] = useState<Message[]>([]);
     const textareaRef = useRef<HTMLTextAreaElement>(null);
     const dotsRef = useRef<HTMLLIElement>(null);
-    let typingTimer: any;
     const doneTypingInterval: number = 1000;
+    let typingTimer: any;
     
 
 
